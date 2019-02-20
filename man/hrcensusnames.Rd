@@ -4,7 +4,7 @@
 \name{hrcensusnames}
 \alias{hrcensusnames}
 \alias{hrcensusnames-package}
-\title{hrcensusnames}
+\title{Croatian census names}
 \usage{
 hrcensusnames(firstname, surname)
 }
@@ -16,10 +16,26 @@ Data frame with frequencies of names.
 }
 \description{
 Frequency of personal names/surnames from Croatian census.
+
+\code{hrcensusnames} fetches the frequencies of names from \url{https://www.dzs.hr/hrv/censuses/census2011/results/censusnames.htm}.
 }
 \details{
-When supplying multiple first names and surnames, both vectors should be of the same lenght or one should be a unit vector and it will be replicated.
+Only first name or surname can be supplied, or both to fetch full name frequency. When supplying multiple first names and surnames, both vectors should be of the same lenght or one should be a unit vector and it will be replicated.
+Queries are not case sensitive.
 }
 \note{
 Please note the source of the data! \url{https://www.dzs.hr/default_e.htm}
+}
+\examples{
+\dontrun{
+# First name
+hrcensusnames("Ana")
+
+# Full name
+hrcensusnames("Ana","Fabijanec")
+
+# Multiple first names, same surname
+hrcensusnames(c("Ana","Ivana"), "Fabijanec")
+}
+
 }
