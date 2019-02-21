@@ -1,12 +1,12 @@
 Package: hrcensusnames
-Title: Croatian Census Names
+Title: Frequencies of Croatian personal names/surnames
 Version: 0.0.1
 Authors@R: 
     person(given = "Martin",
            family = "Požar",
            role = c("aut", "cre"),
            email = "mpozar@dataspekt.com")
-Description: Frequencies of personal names/surnames from Croatian census.
+Description: Croatian bureau of statistics (CBS) gives access to frequencies of personal names/surnames based on data from official census. This package offers functionality to fetch the frequencies and make it available for analysis in R.
 Imports: stats, rvest, xml2, httr, stringr, magrittr, tibble, dplyr, purrr
 License: GPL-3
 Encoding: UTF-8
