@@ -14,9 +14,9 @@ devtools::install_github("dataspekt/hrcensusnames")
 
 ## Usage
 
-Examples:
-
 ```r
+library("hrcensusnames")
+
 # First name
 censusnames("Ana")
 
@@ -31,4 +31,4 @@ Only first name or surname can be supplied, or both to fetch full name frequency
 
 Function will return a data frame with frequencies of names. Frequencies less than 10 are not available and will be returned as missing values.
 
-When using this data, please acknowledge the source! For more info visit [CBS page](https://www.dzs.hr/default_e.htm).
+When using this data, please acknowledge the source! For more info on the source visit [CBS homepage](https://www.dzs.hr/default_e.htm).
