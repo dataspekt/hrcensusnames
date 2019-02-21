@@ -4,7 +4,7 @@
 \name{hrcensusnames}
 \alias{hrcensusnames}
 \alias{hrcensusnames-package}
-\title{Croatian census names}
+\title{Frequencies of Croatian personal names/surnames}
 \usage{
 hrcensusnames(firstname, surname)
 }
@@ -12,19 +12,18 @@ hrcensusnames(firstname, surname)
 \item{firstname, surname}{Vectors of names.}
 }
 \value{
-Data frame with frequencies of names.
+Data frame with frequencies of names. Frequencies less than 10 are not available and will be returned as missing values.
 }
 \description{
-Frequency of personal names/surnames from Croatian census.
+Croatian bureau of statistics (CBS) gives access to frequencies of personal names/surnames based on data from official census. This package offers functionality to fetch the frequencies and make it available for analysis in R.
 
-\code{hrcensusnames} fetches the frequencies of names from \url{https://www.dzs.hr/hrv/censuses/census2011/results/censusnames.htm}.
+Function \code{hrcensusnames} fetches the frequencies of names from \url{https://www.dzs.hr/hrv/censuses/census2011/results/censusnames.htm}.
 }
 \details{
-Only first name or surname can be supplied, or both to fetch full name frequency. When supplying multiple first names and surnames, both vectors should be of the same lenght or one should be a unit vector and it will be replicated.
-Queries are not case sensitive.
+Only first name or surname can be supplied, or both to fetch full name frequency. When supplying multiple first names and surnames, both vectors should be of the same length or one should be a unit vector and it will be replicated (with a warning). Queries are not case sensitive. Leading/trailing whitespace is trimmed and only unique names are retained.
 }
 \note{
-Please note the source of the data! \url{https://www.dzs.hr/default_e.htm}
+When using this data, please acknowledge the source! For more info visit CBS page: \url{https://www.dzs.hr/default_e.htm}.
 }
 \examples{
 \dontrun{
@@ -36,6 +35,7 @@ hrcensusnames("Ana","Fabijanec")
 
 # Multiple first names, same surname
 hrcensusnames(c("Ana","Ivana"), "Fabijanec")
+
 }
 
 }

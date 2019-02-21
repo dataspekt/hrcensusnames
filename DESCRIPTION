@@ -1,13 +1,13 @@
 Package: hrcensusnames
 Title: Croatian Census Names
-Version: 0.1
+Version: 0.0.1
 Authors@R: 
     person(given = "Martin",
            family = "Požar",
            role = c("aut", "cre"),
            email = "mpozar@dataspekt.com")
 Description: Frequencies of personal names/surnames from Croatian census.
-Imports: stats, rvest, xml2, httr, stringr, magrittr, tibble, dplyr, purrr, rlang
+Imports: stats, rvest, xml2, httr, stringr, magrittr, tibble, dplyr, purrr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

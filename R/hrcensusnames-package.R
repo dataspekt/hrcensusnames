@@ -1,6 +1,6 @@
-#' Croatian census names
+#' Frequencies of Croatian personal names/surnames
 #'
-#' Frequency of personal names/surnames from Croatian census.
+#' Croatian bureau of statistics (CBS) gives access to frequencies of personal names/surnames based on data from official census. This package offers functionality to fetch the frequencies and make it available for analysis in R.
 #'
 #' @docType package
 #' @name hrcensusnames
@@ -13,5 +13,4 @@
 #' @importFrom stringr str_extract
 #' @importFrom tibble as_tibble
 #' @importFrom dplyr select
-#' @importFrom rlang .data
 NULL
